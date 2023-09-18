@@ -34,9 +34,9 @@ function FormUrl() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Lien de l'URL à Scrapper :
+    <div className="content">
+      <form className="formUrl" onSubmit={handleSubmit}>
+        <label>Lien de l'URL à Scrapper :</label>
         <input
           type="text"
           value={url}
@@ -44,11 +44,11 @@ function FormUrl() {
           placeholder="Entrez l'URL ici"
           style={{ borderColor: isValidUrl ? "initial" : "red" }}
         />
-      </label>
-      <br />
-      {!isValidUrl && <p style={{ color: "red" }}>URL invalide.</p>}
-      <button type="submit">Envoyer</button>
-    </form>
+        <br />
+        {!isValidUrl && <p style={{ color: "red" }}>URL invalide.</p>}
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
   );
 }
 

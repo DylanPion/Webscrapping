@@ -12,7 +12,6 @@ public class Url {
     private String url;
 
     public Url() {
-        // Constructeur par défaut requis par Spring Data MongoDB
     }
 
     public Url(String id, String url) {
